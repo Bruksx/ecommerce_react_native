@@ -1,0 +1,4 @@
+https://www.figma.com/file/ic5OIhNkQQplkj1mzLcKDD/E-Commerce-App-Design-(Community)?type=design&node-id=0-1&t=wwkrXO5aMn2sfrKM-0
+https://www.tutorialspoint.com/react_native/react_native_text_input.htm
+https://aboutreact.com/react-native-vector-icons/
+https://docs.expo.dev/guides/icons/
