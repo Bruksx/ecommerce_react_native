@@ -1,21 +1,29 @@
-import { Image, StyleSheet } from "react-native";
+import { Image, StyleSheet , View} from "react-native";
 
 function MyImage(props){
     return (
+        <View style={styles.container}>
         <Image 
             source={props.imageSource}
             style={styles.image}
         />
+        </View>
     )
 }
 
 
 const styles = StyleSheet.create({
+    container:{
+        backgroundColor:"white",
+        height:64,
+        width:92,
+        borderRadius:30,
+        alignItems:"center",
+        justifyContent:"center"
+    },
     image:{
-        height:100,
-        borderColor:"red",
-        borderWidth:1,
-        width:200,
+        height:25,
+        width:25,
     }
 })
 
