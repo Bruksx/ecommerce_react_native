@@ -1,12 +1,12 @@
-import { Text, View, StyleSheet } from "react-native";
+import { Text, View, StyleSheet, TouchableOpacity } from "react-native";
 import { AntDesign } from "@expo/vector-icons";
 
 function FormText(props) {
   return (
-    <View style={styles.container}>
+    <TouchableOpacity style={styles.container} onPress={()=>{props.navigateTo()}}>
       <Text style={styles.text}>{props.text}</Text>
       <AntDesign name="arrowright" size={20} color="red"style={styles.icon} />
-    </View>
+    </TouchableOpacity>
   );
 }
 

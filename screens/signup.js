@@ -1,14 +1,16 @@
-import { StyleSheet, Text, KeyboardAvoidingView, View} from "react-native";
-import MyImage from "./myimage";
-import Heading from "./heading";
-import FormTextInput from "./formtextinput";
-import FormButton from "./formbutton";
-import FormText from "./formtext";
+import { StyleSheet, Text, KeyboardAvoidingView, View, Pressable, TouchableHighlight} from "react-native";
+import MyImage from "../components/myimage";
+import Heading from "../components/heading";
+import FormTextInput from "../components/formtextinput"
+import FormButton from "../components/formbutton"
+import FormText from "../components/formtext";
 
 export default function SignupScreen({navigation}) {
+  function navigateToLogin(){
+    return navigation.navigate("Login")
+  }
   return (
-    <KeyboardAvoidingView style={styles.container}
-    >
+    <KeyboardAvoidingView style={styles.container}>
       <View style={{width:"100%"}}>
       <Heading title="Sign Up" left={true} search={false}/>
       </View>
@@ -23,15 +25,15 @@ export default function SignupScreen({navigation}) {
         <FormTextInput placeholder="password" />
       </View>
 
-      <View style={{ width:"100%"}}>
-        <View style={{ width:"100%", position:"absolute", bottom:15}}>
-          <FormText text="Already have an account?"/>
+      <TouchableHighlight style={{ width:"100%",}} onPress={()=>{navigation.navigate("Login")}}>
+        <View style={{ width:"100%"}}>
+          <FormText text="Already have an account?" navigateTo={navigateToLogin}/>
         </View>
-      </View>
+      </TouchableHighlight>
 
       <View style={{ width:"100%"}}>
         <View style={{width:"100%", position:"absolute", bottom:10}}>
-          <FormButton title="Sign Up" color="#e60000"/>
+          <FormButton title="Sign Up" color="#e60000" />
         </View>
       </View>
 
