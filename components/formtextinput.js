@@ -2,10 +2,17 @@ import { TextInput, StyleSheet, Text, View } from "react-native";
 import { AntDesign } from "@expo/vector-icons";
 
 function FormTextInput(props) {
+  if (props.formState === "error"){
+    var labelStyle = [styles.label, styles.labelRed]
+    var inputStyle = styles.formTextInputWithBorder
+  }else{
+    var labelStyle = styles.label
+    var inputStyle = styles.formTextInput
+  }
   return (
     <View style={styles.container}>
-      <Text style={styles.label}>{props.label}</Text>
-      <TextInput style={styles.formTextInput} placeholder={props.placeholder} />
+      <Text style={labelStyle}>{props.label}</Text>
+      <TextInput style={inputStyle} placeholder={props.placeholder} />
       <AntDesign
         name={props.antdesignIcon}
         size={24}
@@ -31,7 +38,7 @@ var styles = StyleSheet.create({
     width: "100%",
     height: 60,
     borderColor:"red",
-    borderWidth:2,
+    borderWidth:1,
     borderRadius:3,
   },
   label: {
@@ -40,6 +47,9 @@ var styles = StyleSheet.create({
     color: "#737373",
     top: 5,
     left: 10,
+  },
+  labelRed:{
+    color:"red"
   },
   icon: {
     position: "absolute",

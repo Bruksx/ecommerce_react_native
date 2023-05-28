@@ -1,25 +1,28 @@
-import { StyleSheet, Text , TouchableOpacity} from "react-native";
+import { BackHandler, StyleSheet, Text , TouchableOpacity} from "react-native";
 
 function FormButton(props) {
+  var styles = StyleSheet.create({
+    button: {
+      height: props.height? props.height: 50,
+      width: props.width? props.width: "100%",
+      backgroundColor:props.backgroundColor,
+      borderRadius:45,
+      justifyContent:"center",
+      alignItems:"center",
+      borderColor:props.borderColor,
+    },
+    text:{
+      color:"white"
+    }
+  })
+
   return (
-    <TouchableOpacity title={props.title} style={styles.button}>
+    <TouchableOpacity title={props.title} style={styles.button} onPress={props.onPress}>
         <Text style={styles.text}>{props.title}</Text>
     </TouchableOpacity>
   );
 }
 
-var styles = StyleSheet.create({
-  button: {
-    width:"100%",
-    backgroundColor:"#b30000",
-    height:50,
-    borderRadius:45,
-    justifyContent:"center",
-    alignItems:"center",
-  },
-  text:{
-    color:"white"
-  }
-});
+
 
 export default FormButton;

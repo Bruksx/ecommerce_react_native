@@ -4,8 +4,10 @@ import FormTextInput from "../components/formtextinput"
 import FormText from "../components/formtext"
 import FormButton from "../components/formbutton"
 import MyImage from "../components/myimage"
+import { useNavigation } from "@react-navigation/native"
 
-export default function LoginScreen(navigation){
+export default function LoginScreen(){
+    const navigation = useNavigation()
     return (
         <KeyboardAvoidingView style={styles.container}>
             <View style={{ width:"100%", justifyContent:"space-between"}}>
@@ -16,9 +18,9 @@ export default function LoginScreen(navigation){
                     <FormTextInput label="Password"/>
                 </View>
                 <View style={{ height:20, width:"100%"}}></View>
-                <FormText text="Forgot your password?" navigateTo={()=>{}}/>
+                <FormText text="Forgot your password?" navigateTo="ForgotPassword"/>
                 <View style={{height:30, width:"100%"}}></View>
-                <FormButton title="LOGIN"/>
+                <FormButton title="LOGIN" backgroundColor="#e60000" onPress={()=>{navigation.navigate("Main")}}/>
             </View>
 
             <View style={{height:"24%", width:"100%"}}></View>

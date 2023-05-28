@@ -25,15 +25,13 @@ export default function SignupScreen({navigation}) {
         <FormTextInput placeholder="password" />
       </View>
 
-      <TouchableHighlight style={{ width:"100%",}} onPress={()=>{navigation.navigate("Login")}}>
         <View style={{ width:"100%"}}>
-          <FormText text="Already have an account?" navigateTo={navigateToLogin}/>
+          <FormText text="Already have an account?" navigateTo="Login"/>
         </View>
-      </TouchableHighlight>
 
       <View style={{ width:"100%"}}>
         <View style={{width:"100%", position:"absolute", bottom:10}}>
-          <FormButton title="Sign Up" color="#e60000" />
+          <FormButton title="Sign Up" borderColor="#b30000" backgroundColor="#b30000"/>
         </View>
       </View>
 

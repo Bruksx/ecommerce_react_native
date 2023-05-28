@@ -1,12 +1,17 @@
-import { Text, StyleSheet, View , TouchableHighlight} from "react-native/";
+import { Text, StyleSheet, View , TouchableOpacity} from "react-native/";
 import { AntDesign } from "@expo/vector-icons";
+import { useNavigation } from "@react-navigation/native";
+
 
 function Heading(props) {
+  const navigation = useNavigation()
   return (
     <View style={styles.container}>
       <View style={styles.horizontalContainer}>
         {props.left == true ? (
-          <AntDesign name="left" size={22} color="black" style={styles.left} />
+          <TouchableOpacity onPress={()=>{navigation.goBack()}}>
+            <AntDesign name="left" size={22} color="black" style={styles.left} />
+          </TouchableOpacity>
         ) : (
           <Text></Text>
         )}
