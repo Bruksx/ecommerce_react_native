@@ -39,6 +39,8 @@ var styles = StyleSheet.create({
   horizontalContainer: {
     flexDirection: "row",
     justifyContent: "space-between",
+    width:"95%",
+    alignSelf:"center"
   },
   formHeading: {
     fontSize: 30,

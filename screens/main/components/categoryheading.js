@@ -11,6 +11,7 @@ export default function CategoryHeading(props){
 
 const styles = StyleSheet.create({
     container:{
+        marginTop:50,
         paddingLeft:20,
     },
     mainText:{

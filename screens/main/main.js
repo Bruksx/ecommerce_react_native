@@ -2,6 +2,7 @@ import { Text, View, ScrollView, StyleSheet} from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import HomeScreen from "./homescreen";
+import ShopScreen from "./shopscreen";
 import { AntDesign , Feather} from '@expo/vector-icons';
 
 const Tab = createBottomTabNavigator()
@@ -32,7 +33,7 @@ export default function MainScreen(navigation){
 
                     })}>
                 <Tab.Screen name="Home" component={HomeScreen}/>
-                <Tab.Screen name="Shop" component={HomeScreen}/>
+                <Tab.Screen name="Shop" component={ShopScreen}/>
                 <Tab.Screen name="Bag" component={HomeScreen}/>
                 <Tab.Screen name="Favourites" component={HomeScreen}/>
                 <Tab.Screen name="Profile" component={HomeScreen}/>
@@ -41,15 +42,7 @@ export default function MainScreen(navigation){
     )
 }
 
-/*export default function MainScreen(navigation){
-    return (
-        <View>
-            <ScrollView style={styles.scrollView}>
-            </ScrollView>
-            <ButtomNav />
-        </View>
-    )
-}*/
+
 
 const styles = StyleSheet.create({
     container:{

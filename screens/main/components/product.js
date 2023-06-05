@@ -40,7 +40,7 @@ export default function Product(props) {
         {likeIcon}
       </TouchableOpacity>
       <View style={styles.ratingContainer}>
-        <Rating
+      <Rating
           style={styles.rating}
           imageSize={20}
           readonly
@@ -77,7 +77,7 @@ const styles = StyleSheet.create({
     width: 180,
     height: 340,
     justifyContent: "space-between",
-    marginRight:20,
+    marginLeft:20,
   },
   image: {
     height: 230,
